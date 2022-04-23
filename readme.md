@@ -6,3 +6,5 @@ python app.py
 ```
 python call_api.py
 ```
+
+3. Data: sample_data.csv, data_gen1.csv, data_gen2.csv
