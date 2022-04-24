@@ -38,8 +38,8 @@ def predict_process():
     predict = model.predict(current)
     predict = scaler.inverse_transform(predict)
     rainfall_pred = predict[0][0] if predict[0][0] > 0 else 0
-    tide_pred = predict[0][1] if predict[0][1] else 0
-    flooded_pred = predict[0][2] if predict[0][2] else 0
+    tide_pred = predict[0][1] 
+    flooded_pred = predict[0][2] if predict[0][2] > 0 else 0
     return jsonify({'rainfall': float(rainfall_pred), 'tide': float(tide_pred), 'flooded': float(flooded_pred)})
 
 # Start Backend
